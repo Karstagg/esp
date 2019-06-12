@@ -2,7 +2,7 @@ module.exports = {
   siteTitle: "esp", // <title>
   shortSiteTitle: "esp", // <title> ending for posts and pages
   siteDescription: "esp",
-  siteUrl: "esp",
+  siteUrl: "http://esp.esp",
   // pathPrefix: "",
   siteImage: "preview.jpg",
   siteLanguage: "en",
