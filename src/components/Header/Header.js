@@ -83,7 +83,7 @@ class Header extends React.Component {
               align-items: center;
               display: flex;
               flex-direction: "column";
-              color: ${theme.text.color.primary};
+              color: ${theme.color.logoGray};
 
               .logo {
                 flex-shrink: 0;
@@ -159,10 +159,10 @@ class Header extends React.Component {
 
               :global(a.logoType),
               h1 {
-                color: ${theme.color.neutral.white};
+                color: ${theme.color.logoGray};
               }
               h2 {
-                color: ${theme.color.neutral.gray.d};
+                color: ${theme.color.logoGray};
               }
             }
           }
@@ -200,10 +200,10 @@ class Header extends React.Component {
               &.homepage:not(.fixed) {
                 :global(a.logoType),
                 h1 {
-                  color: ${theme.color.neutral.gray.j};
+                  color: ${theme.color.logoGray};
                 }
                 h2 {
-                  color: ${theme.color.neutral.gray.d};
+                  color: ${theme.color.logoGray};
                 }
               }
             }

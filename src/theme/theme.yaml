@@ -38,6 +38,8 @@ size:
 # COLOR
 color:
   # color options
+  logoGray: '#3b3737'
+  logoRed: '#c00000'
   neutral:
     white: &color-white '#ffffff'
     gray:

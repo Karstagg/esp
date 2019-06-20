@@ -3,18 +3,19 @@ import PropTypes from "prop-types";
 import { Link } from "gatsby";
 
 const Item = props => {
-  const { theme, item: { label, to, icon: Icon } = {}, onClick } = props;
+  const { theme, item: { label, to } = {}, onClick } = props;
 
   return (
     <React.Fragment>
-      <li className={"hiddenItem" in props ? "hiddenItem" : "item"} key={label}>
+      <li className={"hiddenItem" in props ? "hiddenItem" : "item"} className={label == 'Get Help' ? 'redLabel' : ''} key={label}>
         <Link
           to={to}
           className={"hiddenItem" in props ? "inHiddenItem" : ""}
+          className={label == 'Get Help' ? 'inRedLabel' : ''}
           onClick={onClick}
           data-slug={to}
         >
-          {Icon && <Icon />} {label}
+          {label}
         </Link>
       </li>
 
@@ -52,10 +53,6 @@ const Item = props => {
               border-radius: ${theme.size.radius.small};
             }
 
-            :global(.homepage):not(.fixed) & :global(a) {
-              color: ${theme.color.neutral.white};
-            }
-
             :global(a:hover) {
               color: ${theme.color.brand.primary};
               background: color(white alpha(-60%));
@@ -88,6 +85,12 @@ const Item = props => {
               &:hover {
                 color: ${theme.color.brand.primary};
               }
+            }
+          }
+          .redLabel {
+            & :global(a.inRedLabel) {
+              color: ${theme.color.logoRed};
+
             }
           }
         }
