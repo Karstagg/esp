@@ -134,9 +134,9 @@ icon:
 hero:
   h1:
     size: *font-size-xxl
-    color: *color-white
+    color: black
     lineHeight: *font-line-height-xs
-  background: 'linear-gradient(0deg, #E0306E, #6438B5)'
+  background: *color-white
 blog:
   h1:
     size: *font-size-l
@@ -147,4 +147,3 @@ header:
     default: 80px
     fixed: 50px;
     homepage: 100px;
-

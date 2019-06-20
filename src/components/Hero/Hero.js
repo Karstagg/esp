@@ -4,34 +4,47 @@ import PropTypes from "prop-types";
 import { FaArrowDown } from "react-icons/fa/";
 
 const Hero = props => {
-  const { scrollToContent, backgrounds, theme } = props;
+  const { scrollToContent, imgs, theme } = props;
 
   return (
     <React.Fragment>
-      <section className="hero">
-        <h1>
-          This is a demo site of&nbsp;the <strong>heroBlog</strong> GatsbyJS starter
-        </h1>
-        <button onClick={scrollToContent} aria-label="scroll">
-          <FaArrowDown />
-        </button>
+      <section className="hero-container">
+        <div className="hero-left">
+          <h1>
+            This is a demo site of&nbsp;the <strong>heroBlog</strong> GatsbyJS starter
+          </h1>
+        </div>
+        <div className="hero-right">
+          <img className="logo" src={imgs.logoDesktop} alt="esp logo"/>
+        </div>
       </section>
 
       {/* --- STYLES --- */}
       <style jsx>{`
-        .hero {
+        .hero-container {
           align-items: center;
           background: ${theme.hero.background};
-          background-image: url(${backgrounds.mobile});
-          background-size: cover;
           color: ${theme.text.color.primary.inverse};
           display: flex;
-          flex-flow: column nowrap;
           justify-content: center;
           min-height: 100vh;
           height: 100px;
           padding: ${theme.space.inset.l};
           padding-top: ${theme.header.height.homepage};
+        }
+
+        .hero-left {
+          flex: 2 0 auto;
+          width: 100%;
+        }
+
+        .hero-right {
+          flex: 1 0 auto;
+          width: 100%;
+        }
+
+        .logo {
+          height: 20%
         }
 
         h1 {
@@ -100,7 +113,6 @@ const Hero = props => {
 
         @from-width tablet {
           .hero {
-            background-image: url(${backgrounds.tablet});
           }
 
           h1 {
@@ -115,7 +127,6 @@ const Hero = props => {
 
         @from-width desktop {
           .hero {
-            background-image: url(${backgrounds.desktop});
           }
 
           h1 {
@@ -134,7 +145,6 @@ const Hero = props => {
 
 Hero.propTypes = {
   scrollToContent: PropTypes.func.isRequired,
-  backgrounds: PropTypes.object.isRequired,
   theme: PropTypes.object.isRequired
 };
 
