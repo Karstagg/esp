@@ -25,18 +25,15 @@ const Hero = props => {
       <style jsx>{`
         .container-container {
           max-width: 100vw;
+          height: 100vh;
         }
 
         .hero-container {
-          flex: 1 0 auto;
-          align-items: center;
           background: ${theme.hero.background};
           color: ${theme.text.color.primary.inverse};
           display: flex;
           justify-content: center;
-          min-height: 100vh;
-          height: 100px;
-          width: 100vw;
+          align-items: center;
           padding: ${theme.space.inset.l};
           padding-top: ${theme.header.height.homepage};
         }
@@ -44,11 +41,17 @@ const Hero = props => {
         .hero-left {
             flex: 1 0 auto;
             width: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .hero-right {
             flex: 1 0 auto;
             width: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .logo {

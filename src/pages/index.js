@@ -57,7 +57,7 @@ const InnerWave = styled.div`
     return (
       <React.Fragment>
       {/*<Divider fill="#23262b" speed={0.2} offset={offset}>*/}
-      <WaveWrapper>
+      {/*<WaveWrapper>
         <InnerWave>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 338.05" preserveAspectRatio="none" width="100vw">
             <path>
@@ -70,7 +70,7 @@ const InnerWave = styled.div`
             </path>
           </svg>
         </InnerWave>
-      </WaveWrapper>
+      </WaveWrapper>*/}
 {/*</Divider>*/}
         <ThemeContext.Consumer>
           {theme => (
