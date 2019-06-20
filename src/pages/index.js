@@ -9,11 +9,6 @@ import Hero from "../components/Hero";
 import Seo from "../components/Seo";
 
 class IndexPage extends React.Component {
-  separator = React.createRef();
-
-  scrollToContent = e => {
-    this.separator.current.scrollIntoView({ block: "start", behavior: "smooth" });
-  };
 
   render() {
     const {
@@ -79,11 +74,9 @@ const InnerWave = styled.div`
 {/*</Divider>*/}
         <ThemeContext.Consumer>
           {theme => (
-            <Hero scrollToContent={this.scrollToContent} imgs={imgs} theme={theme} />
+            <Hero imgs={imgs} theme={theme} />
           )}
         </ThemeContext.Consumer>
-
-        <hr ref={this.separator} />
 
         {/*<ThemeContext.Consumer>
           {theme => <Blog posts={posts} theme={theme} />}
@@ -91,12 +84,6 @@ const InnerWave = styled.div`
 
         <Seo facebook={facebook} />
 
-        <style jsx>{`
-          hr {
-            margin: 0;
-            border: 0;
-          }
-        `}</style>
       </React.Fragment>
     );
   }

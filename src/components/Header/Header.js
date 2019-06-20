@@ -200,7 +200,7 @@ class Header extends React.Component {
               &.homepage:not(.fixed) {
                 :global(a.logoType),
                 h1 {
-                  color: ${theme.color.neutral.white};
+                  color: ${theme.color.neutral.gray.j};
                 }
                 h2 {
                   color: ${theme.color.neutral.gray.d};
