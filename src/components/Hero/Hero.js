@@ -12,20 +12,31 @@ const Hero = props => {
       <section className="hero-container">
         <div className="hero-left">
           <h1>
-            This is a demo site of&nbsp;the <strong>heroBlog</strong> GatsbyJS starter
+            This is a demo site of the heroBlog GatsbyJS starter
           </h1>
         </div>
         <div className="hero-right">
           <img className="logo" src={imgs.logoDesktop} alt="esp logo"/>
         </div>
       </section>
+      <hr className="redLine"/>
       </div>
 
       {/* --- STYLES --- */}
       <style jsx>{`
+        .redLine {
+          height: 8px;
+          background-color: #cc0000;
+          border: none;
+          width: 90%;
+          margin: auto;
+        }
+
         .container-container {
           max-width: 100vw;
-          height: 100vh;
+          height: 90vh;
+          display: flex;
+          flex-flow: column nowrap;
         }
 
         .hero-container {
@@ -34,8 +45,9 @@ const Hero = props => {
           display: flex;
           justify-content: center;
           align-items: center;
+          height: 100vh;
           padding: ${theme.space.inset.l};
-          padding-top: ${theme.header.height.homepage};
+          padding-top: 0;
         }
 
         .hero-left {
@@ -62,7 +74,7 @@ const Hero = props => {
           text-align: center;
           font-size: ${theme.hero.h1.size};
           margin: ${theme.space.stack.l};
-          color: ${theme.hero.h1.color};
+          color: ${theme.color.logoGray};
           line-height: ${theme.hero.h1.lineHeight};
           text-remove-gap: both 0 "Open Sans";
 
